@@ -18,7 +18,7 @@ let main args =
     Aardvark.Init()
     Aardium.init()
 
-    let app = new OpenGlApplication()
+    let app = new OpenGlApplication(true)
 
     WebPart.startServerLocalhost 4321 [
         MutableApp.toWebPart' app.Runtime false (App.start App.app)
